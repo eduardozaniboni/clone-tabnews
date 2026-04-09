@@ -1,0 +1,13 @@
+OUTPUT=$(git diff --name-only --cached -- .env*)
+
+if [ -z "$OUTPUT" ]; then
+    echo "None .env file"
+    exit 0
+else
+    if [ "$ALLOW_ENV" = "1" ]; then
+      echo "Have $OUTPUT here, but ALLOW_ENV is set to 1, skipping check"
+      exit 0
+    fi
+    echo "Have $OUTPUT here, are u right this?"
+    exit 1
+fi
