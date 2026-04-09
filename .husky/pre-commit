@@ -8,6 +8,6 @@ else
       echo "Have $OUTPUT here, but ALLOW_ENV is set to 1, skipping check"
       exit 0
     fi
-    echo "Have $OUTPUT here, are u rigth this?"
+    echo "Have $OUTPUT here, are u right this?"
     exit 1
 fi
